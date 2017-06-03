@@ -1,0 +1,140 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>FreeCodeCamp Digest</title>
+    <meta name="description" content="FreeCodeCamp Digest">
+    <meta name="Evaristo" content="SitePoint">
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+  <![endif]-->
+    <!--<link rel="stylesheet" href="css/styles.css?v=1.0">-->
+    <link rel="stylesheet" href="css/styles2.css">
+</head>
+
+<body class="news index">
+
+    <header>
+        <!--            <div class="navbar easybar">
+                <div class="menulinks" style="cursor:pointer" onclick="window.location.href='/'">
+                    <a href="/"></a>
+                </div>
+                <div class="menulink"><a href="*" class="archives">ARCHIVES</a>
+                    <span class="divisor">|</span>
+                    <a href="*" class="search">SEARCH</a></div>
+            </div>
+
+-->
+        <div class="container">
+
+            <nav class="navbar navbar-inverse easybar">
+                <!--http://stackoverflow.com/questions/18529274/change-navbar-color-in-twitter-bootstrap-3-->
+                <div class="container-fluid">
+
+                    <div class="navbar-header">
+                        <a class="navbar-brand" href="index.html">FCC Digest</a>
+                    </div>
+
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="index.html">Latest Issues</a></li>
+                        <li><a href="list.html">Top Rankings</a></li>
+                        <li><a href="reference.html">Archives</a></li>
+                    </ul>
+
+
+                    <form class="navbar-form navbar-left easybar">
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Search">
+                            <div class="input-group-btn">
+                                <button class="btn btn-default" type="submit">
+<i class="glyphicon glyphicon-search"></i>
+</button>
+                            </div>
+                        </div>
+                    </form>
+
+                </div>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+    <main class="rankingpage">
+        <div class="container">
+            <div class="jumbotron jbtrchart">
+                <img src='img/multiBarChart.png' class='chart'>
+                <p>This is a chart about links trends</p>
+                <p></p>
+            </div>
+            <!--<p>This is some text.</p>
+            <p>This is another text.</p>-->
+        </div>
+    </main>
+
+    <section>
+        <div class=container>
+            <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names..">
+
+            <ul id="myUL">
+                <li><a href="#" class="header">A</a></li>
+                <li><a href="reference.html">Adele</a></li>
+                <li><a href="reference.html">Agnes</a></li>
+
+                <li><a href="#" class="header">B</a></li>
+                <li><a href="reference.html">Billy</a></li>
+                <li><a href="reference.html">Bob</a></li>
+
+                <li><a href="#" class="header">C</a></li>
+                <li><a href="reference.html">Calvin</a></li>
+                <li><a href="reference.html">Christina</a></li>
+                <li><a href="reference.html">Cindy</a></li>
+            </ul>
+        </div>
+    </section>
+
+    <footer></footer>
+
+    <div id="b-b"></div>
+
+
+
+
+
+
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!--<script src="js/scripts.js"></script>-->
+    <script>
+        function myFunction() {
+            // Declare variables
+            var input, filter, ul, li, a, i;
+            input = document.getElementById('myInput');
+            filter = input.value.toUpperCase();
+            ul = document.getElementById("myUL");
+            li = ul.getElementsByTagName('li');
+
+            // Loop through all list items, and hide those who don't match the search query
+            for (i = 0; i < li.length; i++) {
+                a = li[i].getElementsByTagName("a")[0];
+                if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+                    li[i].style.display = "";
+                } else {
+                    li[i].style.display = "none";
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>

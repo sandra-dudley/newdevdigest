@@ -1,0 +1,136 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>FreeCodeCamp Digest</title>
+    <meta name="description" content="FreeCodeCamp Digest">
+    <meta name="Evaristo" content="SitePoint">
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+  <![endif]-->
+    <!--<link rel="stylesheet" href="css/styles.css?v=1.0">-->
+    <link rel="stylesheet" href="css/styles2.css">
+</head>
+
+<body class="news index">
+
+    <header>
+        <!--            <div class="navbar easybar">
+                <div class="menulinks" style="cursor:pointer" onclick="window.location.href='/'">
+                    <a href="/"></a>
+                </div>
+                <div class="menulink"><a href="*" class="archives">ARCHIVES</a>
+                    <span class="divisor">|</span>
+                    <a href="*" class="search">SEARCH</a></div>
+            </div>
+
+-->
+        <div class="container">
+
+            <nav class="navbar navbar-inverse easybar">
+                <!--http://stackoverflow.com/questions/18529274/change-navbar-color-in-twitter-bootstrap-3-->
+                <div class="container-fluid">
+
+                    <div class="navbar-header">
+                        <a class="navbar-brand" href="index.html">FCC Digest</a>
+                    </div>
+
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="index.html">Latest Issues</a></li>
+                        <li><a href="list.html">Top Rankings</a></li>
+                        <li><a href="reference.html">Archives</a></li>
+                    </ul>
+
+
+                    <form class="navbar-form navbar-left easybar">
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Search">
+                            <div class="input-group-btn">
+                                <button class="btn btn-default" type="submit">
+<i class="glyphicon glyphicon-search"></i>
+</button>
+                            </div>
+                        </div>
+                    </form>
+
+                </div>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+    <main class="rankingpage">
+        <div class="container">
+            <div class="jumbotron jbtrchart">
+                <h1><a href='#'>www.example.org</a></h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
+                <p></p>
+            </div>
+            <!--<p>This is some text.</p>
+            <p>This is another text.</p>-->
+        </div>
+    </main>
+
+    <section>
+        <div class=container>
+            <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names..">
+
+            <ul id="myUL2">
+                <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercit <a href="#"><span style='font-size:120%;'>www.example.org/Adele</span></a> sed do eiusmod tempor incididunt ut
+                    labore et </li>
+                <li>Lorem ipsum. Ut enim ad minim veniam, quis nostrud exercit <a href="#"><span style='font-size:120%;'>www.example.org/Agnes</span></a> sed do eiusmod tempor incididunt ut labore et </li>
+                <li>Sed ut perspiciatis unde omnis iste natus error <a href="#"><span style='font-size:120%;'>www.example.org/Billy</span></a></li>
+                <li>Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam <a href="#"><span style='font-size:120%;'>www.example.org/Bob</span></a>, nisi ut aliquid ex ea commodi consequatur?</li>
+                <li>At vero <a href="#"><span style='font-size:120%;'>www.example.org/Calvin</span></a> eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti</li>
+                <li><a href="#"><span style='font-size:120%;'>www.example.org/Cristina</span></a> perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam</li>
+                <li><a href="#"><span style='font-size:120%;'>www.example.org/Cindy</span></a>...</li>
+            </ul>
+        </div>
+    </section>
+
+    <footer></footer>
+
+    <div id="b-b"></div>
+
+
+
+
+
+
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!--<script src="js/scripts.js"></script>-->
+    <script>
+        function myFunction() {
+            // Declare variables
+            var input, filter, ul, li, a, i;
+            input = document.getElementById('myInput');
+            filter = input.value.toUpperCase();
+            ul = document.getElementById("myUL2");
+            li = ul.getElementsByTagName('li');
+
+            // Loop through all list items, and hide those who don't match the search query
+            for (i = 0; i < li.length; i++) {
+                a = li[i].getElementsByTagName("a")[0];
+                if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+                    li[i].style.display = "";
+                } else {
+                    li[i].style.display = "none";
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>
